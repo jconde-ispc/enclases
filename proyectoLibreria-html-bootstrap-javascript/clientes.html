@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+<!--BOOTSTRAP - PASO 1 (INCLUIR LOS ARCHIVOS CSS Y JS DE BOOTSTRAP)-->
+    
+    <!--Forma de incluir bootstrap con links en la nube-->
+<!--
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+-->
+    <!--Forma de incluir Bootstrap local, habiendose descargado previamente bootstrap-->
+    <link href="css/bootstrap/5.2.2/css/bootstrap.min.css" rel="stylesheet">    
+    <script src="css/bootstrap/5.2.2/js/bootstrap.min.js"></script>
+    <script src="css/bootstrap/5.2.2/js/bootstrap.bundle.min.js"></script><!--incluye popper-->    
+
+    <!--Esta línea es para incluir el uso de iconos de bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+<script src="js/main.js"></script>
+
+    <title>Formularios - Librería The travel bookshop</title>
+</head>
+<body>
+    <div class="container" ><!--BOOTSTRAP - PASO 2: CONTENEDOR -->
+    <h1>The travel bookshop</h1>
+ 
+
+<div class="row">
+    <div class="col-sm">
+      <h2>Registro de clientes (FORMULARIOS)</h2>
+      <p>Se utiliza un formulario HTML para recopilar la entrada del usuario. La entrada del usuario se envía con mayor frecuencia a un servidor para su procesamiento.
+          En un formulario se especifican distintos componentes HTML que permiten recabar información, que será enviada al presionar un botón de tipo "submit" a donde se haya especificado en el atributo "action" del formulario
+      </p>
+      
+        <img class="rounded float-start img-fluid mb-2" src="img/books-on-shelf.jpg" alt="Portada de la librería"> <!--img incorpora una imagen, src, width y alt son atributos-->
+        <img class="rounded float-start img-fluid mb-2" src="img/standing-teen-schoolgirl-taking-book-from-backpack.jpg" alt="Portada de la librería"> <!--img incorpora una imagen, src, width y alt son atributos-->
+       <!-- <img class="rounded float-start img-fluid" src="img/portada3.jpg" alt="Portada de la librería"> --> <!--img incorpora una imagen, src, width y alt son atributos-->
+    </div>
+    <div class="col">  
+
+        <!--Se utiliza un formulario HTML para recopilar la entrada del usuario.
+            La entrada del usuario se envía con mayor frecuencia a un servidor para su procesamiento.-->
+    <form action="#" name="formCliente" class="mt-3" onsubmit="return controlyEnvio()"> 
+        <!--El <form> es un contenedor para diferentes tipos de elementos de entrada, como: campos de texto, casillas de verificación, botones de opción, botones de envío, etc.-->
+        <!--El foratributo de la <label>etiqueta debe ser igual al idatributo del <input> elemento para unirlos.-->
+            <div class="alert alert-primary" role="alert">
+                Complete el siguiente formulario:
+              </div>
+
+            <div class="form-floating my-2">
+                <input class="form-control" type="text" name="nombre" id="nombre" placeholder="ingrese su nombre" required autofocus>
+                <label class="form-label" for="nombre">Nombre (*)</label>
+            </div>
+        
+         <div class="row"><!--FILA-->
+            <div class="col-3"><!--COLUMNA DE 3/12 PARTES-->
+                <label for="apellido" class="form-label mt-2">Apellido (*)</label>            
+            </div>
+            <div class="col-9"><!--COLUMNA DE 9/12 PARTES-->
+                <input class="form-control mb-2" type="text" name="apellido" id="apellido" placeholder="apellido desactivado" disabled>
+            </div>
+         </div><!--FILA-->   
+        
+        <div class="form-floating my-2">
+            <input class="form-control" type="email" name="email" id="email" 
+                  placeholder="ingrese su email" required onblur="controlCuentasMail()"> <!-- onBlur es el evento que se ejecuta cuando salgo de un campo. Más info: https://www.w3schools.com/jsref/event_onblur.asp -->
+            <label class="form-label" for="email">Correo Electrónico (*)</label>
+            <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+
+        </div>
+
+        <div class="form-floating my-2">
+          <input class="form-control" type="email" name="email2" id="email2" placeholder="ingrese su email" required onblur="controlCuentasMail()">
+          <label class="form-label" for="email">Correo Electrónico (nuevamente) (*)</label>
+          <div id="emailHelp2" class="form-text">Las cuentas de correo ingresadas deben coincidir</div>
+      </div>
+
+   
+        <br>
+        <label class="form-label mt-2" for="nacimiento">Fecha de nacimiento:</label>
+        <input class="form-control" type="date" id="nacimiento" name="nacimiento">
+        <br>
+        <label class="form-label mt-2" for="promedioLectura">Cantidad de libros promedio que lee por mes (entre 1 y 5):</label>
+        <input class="form-control" type="number" id="promedioLectura" name="promedioLectura" min="1" max="5" value="3" readonly>
+        <br>
+        
+        <label class="form-label mt-2" for="hora">Hora de lectura:</label>
+        <input class="form-control" type="time" id="hora" name="hora" value="20:00">
+        <br>
+        <label class="form-label" for="categoria">Categoría favorita:</label>
+        <select class="form-select" id="categoria" name="categoria">
+            <option value="comedia">Comedia</option>
+            <option value="drama">Drama</option>
+            <option value="terror">Terror</option>
+            <option value="biografia">Biografía</option>
+        </select>
+        <br>
+               
+        <label class="form-label" for="pwd">Clave (*)</label>
+        <input class="form-control" type="password" id="pwd" name="pwd" required>
+        <div id="passwordHelpBlock" class="form-text">
+            Su contraseña debe tener entre 8 y 20 caracteres, contener letras y números, y no debe contener espacios, caracteres especiales ni emoji.
+          </div>
+        <br>
+        <input type="hidden" id="valorOculto" name="valorOculto" value="3487">
+        <br><br>
+
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Limpiando los datos del formulario</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Usted está por limpiar (borrar) todos los datos que cargo en el formulario. ¿Desea continuar?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="reset" class="btn btn-success" data-bs-dismiss="modal" >Limpiar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-md-center">
+    <div class="col-auto">
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Limpiar datos
+  </button>
+    </div>
+    <div class="col-auto">
+        <input type="submit" class="btn btn-success" value="Enviar datos"  >
+      <!--  <input type="button" class="btn btn-primary" value="Enviar datos" >-->
+    </div>
+  </div>
+        
+        
+    </form>   
+    
+</div>
+</div>
+
+<div class="alert alert-secondary mt-2" role="alert">
+  <div class="row">
+    <div class="col-sm-3">
+      <img src="img/js.png" alt="icono de javascript" class="rounded float-start img-fluid mb-2">
+    </div>
+    <div class="col-sm-9">
+      <p>
+        En esta página utilizamos JavaScript en dos lugares.
+        Controlamos mediante <strong>onblur="controlCuentasMail()"</strong> en los dos input email. El evento onblur ocurre cuando un objeto pierde el foco.
+        El evento onblur se usa con mayor frecuencia con el código de validación de un formulario (por ejemplo, cuando el usuario abandona un campo de formulario).
+        </p>
+        <p><span class="text-danger">controlCuentasMail()</span> esta definido en js/main.js y lo que hace es controlar que las cuentas de email sean las mismas, y deja un mensaje debajo del segundo input email.</p>
+       
+        <p>En el otro lugar que se utiliiza JavaScript es en el <strong>onsubmit="return controlyEnvio()"</strong>. Esto hace que al presionar el boton input submit, 
+       se ejecute el evento onsubmit, el cual invoca a la funcion controlYEnvio() definida en js/main.js, la cual controla que el mail sea el mismo retornando verdadero o falso según ese control.
+       Además, se realizarán los controles propios del formulario, los del required y según el input, por ejemplo en el input email que tenga un @.</p>
+    </div>
+  </div>
+  
+</div>
+
+    <br>
+    <!--pie pagina-->
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0 text-muted">© 2022 The travel bookshop</p>
+
+    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Inicio</a></li>
+      <li class="nav-item"><a href="clientes.html" class="nav-link px-2 text-muted">Clientes</a></li>
+      <li class="nav-item"><a href="galeria.html" class="nav-link px-2 text-muted">Galeria</a></li>
+      <li class="nav-item"><a href="listadoLibros.html" class="nav-link px-2 text-muted">Listado</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Tutorial</a></li>
+      
+      <li class="nav-item"><i class="bi bi-instagram nav-link px-2 text-muted"></i></li>
+      <li class="nav-item"><i class="bi bi-facebook nav-link px-2 text-muted"></i></li>        
+      <li class="nav-item"><i class="bi bi-whatsapp nav-link px-2 text-muted"></i></li>
+    </ul>
+ 
+
+  </footer>
+<!--pie pagina-->
+</div>
+</body>
+</html>

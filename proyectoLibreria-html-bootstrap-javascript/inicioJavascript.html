@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">    
+    <title>Pruebas de javascript</title>
+
+    <link href="css/bootstrap/5.2.2/css/bootstrap.min.css" rel="stylesheet">    
+    <script src="css/bootstrap/5.2.2/js/bootstrap.min.js"></script>
+    <script src="css/bootstrap/5.2.2/js/bootstrap.bundle.min.js"></script><!--incluye popper-->    
+
+    <!--Esta línea es para incluir el uso de iconos de bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+      <!--Archivos propios-->
+      <script src="js/iniciando.js"></script>
+      <script src="js/obtenerElementos.js"></script>
+</head>
+<body>
+  <div class="container-fluid" >    
+    <h1 id="titulo" >Página para probar javascript</h1>
+
+    <p id="parrafo1">HOLA!!!!!</p>
+
+    <br>
+
+<br>
+
+    <div class="row">      
+      <div class="col-2">
+        <button name="prueba" class="btn btn-primary" onclick="probandoSeleccionID()">getElementById</button>
+      </div>
+      <div class="col-2">
+        <button name="prueba" class="btn btn-secondary" onclick="probandoSeleccionName(this)">getElementsByName</button>
+      </div>
+      <div class="col-2">
+        <button name="prueba" class="btn btn-info" onclick="probandoSeleccionClassName()">getElementsByClassName</button>
+      </div>
+      <div class="col-2">
+        <button name="prueba" class="btn btn-warning" onclick="probandoSeleccionTagName()">getElementsByTagName</button>
+      </div>
+      <div class="col-2">
+        <button name="prueba" class="btn btn-success" onclick="probandoSeleccionQuerySelector()">querySelector</button>
+      </div>
+      <div class="col-2">
+        <button name="prueba" class="btn btn-danger" onclick="probandoSeleccionQuerySelectorAll()">querySelectorAll</button>
+      </div>
+    </div>
+
+    <br>
+
+    <div id="bloqueDIVSintaxisJS">
+      <h3>Sintaxis Javascript</h3>
+      <ul>
+        <li>No se tienen en cuenta los espacios en blanco y las nuevas líneas</li>
+        <li>Se distinguen las mayúsculas y minúsculas.Si en JavaScript se intercambian mayúsculas y minúsculas el script no funciona.</li>
+        <li>No se define el tipo de las variables: al crear una variable, no es necesario indicar el tipo de dato que almacenará. De esta forma, una misma variable puede almacenar diferentes tipos de datos durante la ejecución del script.</li>
+        <li>No es necesario terminar cada sentencia con el carácter de punto y coma (;): en la mayoría de lenguajes de programación, es obligatorio terminar cada sentencia con el carácter punto y coma. Aunque JavaScript no obliga a hacerlo, es conveniente seguir la tradición de terminar cada sentencia con el carácter del punto y coma (;).</li>
+        <li>Se pueden incluir comentarios.</li>
+      </ul>
+    </div>
+
+    <script type="text/javascript">
+        console.log("1 - Hola mundo, desde javascript");
+  
+        /* 1- PRIMER PRUEBA*/
+      //PROBANDO LAS FUNCIONES DEL ARCHIVO "iniciando.js"
+
+        //mensajeInicial("Bienvenido a Javascript!!!!");// TEST 1
+        //variablesyConstantes();// TEST 2
+        //condicionalYBucle(); // TEST 3
+        //bucleFOR();// TEST 4
+        //condicionalBucleyManejoErrores();
+        
+        //si descomento esto va a dar error
+
+        /* 2- SEGUNDA PRUEBA*/
+        //Seleccionando cada boton
+      
+
+      </script>
+
+
+<!--pie pagina-->
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+  <p class="col-md-4 mb-0 text-muted">© 2022 The travel bookshop</p>
+
+  <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+    <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+  </a>
+
+  <ul class="nav col-md-4 justify-content-end">
+    <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Inicio</a></li>
+    <li class="nav-item"><a href="clientes.html" class="nav-link px-2 text-muted">Clientes</a></li>
+    <li class="nav-item"><a href="galeria.html" class="nav-link px-2 text-muted">Galeria</a></li>
+    <li class="nav-item"><a href="listadoLibros.html" class="nav-link px-2 text-muted">Listado</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Tutorial</a></li>
+    
+    <li class="nav-item"><i class="bi bi-instagram nav-link px-2 text-muted"></i></li>
+    <li class="nav-item"><i class="bi bi-facebook nav-link px-2 text-muted"></i></li>        
+    <li class="nav-item"><i class="bi bi-whatsapp nav-link px-2 text-muted"></i></li>
+  </ul>
+
+
+</footer>
+
+      </div>
+</body>
+</html>

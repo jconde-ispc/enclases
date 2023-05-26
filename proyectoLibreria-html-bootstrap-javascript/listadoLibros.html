@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas - Librería The travel bookshop</title>
+
+     <!--BOOTSTRAP - PASO 1 (INCLUIR LOS ARCHIVOS CSS Y JS DE BOOTSTRAP)-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+ 
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+ 
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+</head>
+<body>
+    <div class="container-fluid" ><!--BOOTSTRAP - PASO 2: CONTENEDOR -->
+
+      <div class="row">
+        <div class="col-8">
+          <h1>The travel bookshop</h1>
+          <h2>Libros más vendidos</h2>   
+        </div>
+        <div class="col-4">
+          <!--CARRITO-->
+
+            <div class="order-md-last float-end m-2">
+              <form action="#" name="formCarrito">
+
+                
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="text-primary">Tu carrito</span>
+                  <span id="cantidadTotalProductos" class="badge bg-primary rounded-pill">0</span>
+                </h4>
+
+              <ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between lh-sm">
+                  <div>
+                    <h6 class="my-0">Productos</h6>
+                    <small class="text-muted">Brief description</small>
+                  </div>                  
+                      <span class="text-muted">$</span>
+                      <span class="text-muted text-end" id="totalSumaProductos">0</span>
+                </li>
+              </ul>
+              </form>
+            </div>
+            <!--CARRITO-->
+        </div>
+      </div>
+
+    
+
+    <div class="row">
+    <div class="col">
+    <form action="#" name="formularioListado">
+
+<input type="search" name="buscar" id="inputBuscar" placeholder="ingrese un filtro">
+
+<div class="table-responsive">
+    <table class="mt-3 p-5 table table-striped table-hover table-bordered">
+        <caption>Lista de libros</caption>
+        <thead>
+            <tr class="table-light"><!--FILA DE ENCABEZADOS-->
+                <th>N°</th>
+                <th>TITULO</th>
+                <th>AUTOR</th>
+                <th>ISBN</th>
+                <th>CATEGORIA</th>
+                <th>EDITORIAL</th>
+               
+                <th>PRECIO</th>
+                <th>CANTIDAD</th>
+            </tr>
+        </thead>
+        <tbody>            
+            <tr><!--FILA DATOS 1-->
+                <td>1</td>
+                <td>Martín Fierro</td>
+                <td>José Hernandez</td>
+                <td>1237-44-3745-345-1</td>
+                <td>Cuentos gauchesco</td>
+                <td>La EDITORIAL argentina</td>
+                <td><input type="text" disabled class="form-control" id="valorID1" size="10" value="100"></td>
+                <td class="text-center" ><button type="button" class="btn btn-primary btn-sm" onclick="restarProducto('cantID1','valorID1')">-</button> 
+                    <label class="lead" id="cantID1">0</label>
+                    <button type="button" class="btn btn-primary btn-sm" onclick="sumarProducto('cantID1','valorID1')">+</button>
+                </td>
+            </tr><!--CIERRE FILA DATOS 1-->
+
+            <tr><!--FILA DATOS 2-->
+                <td>2</td>
+                <td>Mi planta de naranja lima</td>
+                <td>José Mauro de Vasconcelos</td>
+                <td>6537-44-6645-345-4</td>
+                <td>Cuento</td>
+                <td>El Ateneo</td>
+                <td><input type="text" disabled class="form-control" id="valorID2" size="10" value="200"></td>
+                <td class="text-center"><button type="button" class="btn btn-primary btn-sm" onclick="restarProducto('cantID2','valorID2')">-</button> 
+                  <label class="lead" id="cantID2">0</label>
+                  <button type="button" class="btn btn-primary btn-sm" onclick="sumarProducto('cantID2','valorID2')">+</button>
+              </td>
+            </tr><!--CIERRE FILA DATOS 2-->
+
+            <tr><!--FILA DATOS 3-->
+                <td>3</td>
+                <td>Don quijote de la Mancha</td>
+                <td>Miguel de Cervantes Saavedra</td>
+                <td>5237-64-3745-335-1</td>
+                <td>Novela de caballería</td>
+                <td>Imprenta Juan de la Cuesta</td>                
+                <td><input type="text" disabled class="form-control" id="valorID3" size="10" value="300"></td>
+                <td class="text-center"><button type="button" class="btn btn-primary btn-sm" onclick="restarProducto('cantID3','valorID3')">-</button> 
+                  <label class="lead" id="cantID3">0</label>
+                  <button type="button" class="btn btn-primary btn-sm" onclick="sumarProducto('cantID3','valorID3')">+</button>
+              </td>
+            </tr><!--CIERRE FILA DATOS 3-->
+        </tbody>
+    </table>
+</div>
+</form>
+
+</div>
+
+
+</div>
+
+<br>
+<!--pie pagina-->
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0 text-muted">© 2022 The travel bookshop</p>
+
+    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Inicio</a></li>
+      <li class="nav-item"><a href="clientes.html" class="nav-link px-2 text-muted">Clientes</a></li>
+      <li class="nav-item"><a href="galeria.html" class="nav-link px-2 text-muted">Galeria</a></li>
+      <li class="nav-item"><a href="listadoLibros.html" class="nav-link px-2 text-muted">Listado</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Tutorial</a></li>
+      
+      <li class="nav-item"><i class="bi bi-instagram nav-link px-2 text-muted"></i></li>
+      <li class="nav-item"><i class="bi bi-facebook nav-link px-2 text-muted"></i></li>        
+      <li class="nav-item"><i class="bi bi-whatsapp nav-link px-2 text-muted"></i></li>
+    </ul>
+ 
+
+  </footer>
+<!--pie pagina-->
+
+</div>
+
+ <!--Archivos propios-->
+ <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia - Librería The travel bookshop</title>
+
+    <!--BOOTSTRAP - PASO 1 (INCLUIR LOS ARCHIVOS CSS Y JS DE BOOTSTRAP)-->
+    
+    <!--Forma de incluir bootstrap con links en la nube-->
+<!--
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+-->
+    <!--Forma de incluir Bootstrap local, habiendose descargado previamente bootstrap-->
+    <link href="css/bootstrap/5.2.2/css/bootstrap.min.css" rel="stylesheet">    
+    <script src="css/bootstrap/5.2.2/js/bootstrap.min.js"></script>
+    <script src="css/bootstrap/5.2.2/js/bootstrap.bundle.min.js"></script><!--incluye popper-->    
+
+    <!--Esta línea es para incluir el uso de iconos de bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+</head>
+<body>
+  <div class="container-fluid" ><!--BOOTSTRAP - PASO 2: CONTENEDOR -->
+    <h1>The travel bookshop</h1>
+    <h2>Multimedia</h2>
+
+    <div class="row">
+      <div class="col-sm-6">
+
+    <div class="card">
+      <h5 class="card-header">Video</h5>
+      <div class="card-body">
+        <p class="card-text">Video que se encuentra en la carpeta del sitio.</p>
+        <video width="100%" controls>
+          <source src="medios/DonQuijotedelaMancha.mp4" type="video/mp4">
+          <source src="medios/DonQuijotedelaMancha.webm" type="video/webm">
+          <source src="movie.ogg" type="video/ogg">
+            Tu navegador no soporta la etiqueta video
+        </video>    
+      </div>
+    </div>
+
+    </div>
+
+    <div class="col-sm-6">
+      <div class="card">
+        <h5 class="card-header">Audio</h5>
+        <div class="card-body">
+          <p class="card-text">Audio que se encuentra en el sitio</p>
+          <audio controls>
+            <source src="horse.ogg" type="audio/ogg"><!--este audio no existe-->
+            <source src="medios/DonQuijotedelaMancha.mp3" type="audio/mpeg"> <!--este si, entonces usa este-->
+              Tu navegador no soporta el elemento audio.
+          </audio>  
+        </div>
+      </div>
+    </div>
+    
+    </div>
+
+
+
+<h3>Video embebido desde Youtube</h3>
+
+    <iframe width="100%" height="400px" src="https://www.youtube.com/embed/AKPa9QpNR9c" 
+      title="YouTube video player" frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+<h3>Audio embebido desde el sitio de soundcloud</h3>
+<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/101144187&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/jos-luis-meneses-rojas" title="José Luis Meneses Rojas" target="_blank" style="color: #cccccc; text-decoration: none;">José Luis Meneses Rojas</a> · <a href="https://soundcloud.com/jos-luis-meneses-rojas/don-quijote-de-la-mancha" title="Don Quijote de la Mancha" target="_blank" style="color: #cccccc; text-decoration: none;">Don Quijote de la Mancha</a></div>
+
+<div class="row mt-2">
+  <div class="col-6">
+    <p>La novela comienza describiéndonos a un hidalgo pobre —cuyo exacto nombre solo se revelará al final de la obra—,
+      oriundo de un lugar indeterminado de <a href="https://es.wikipedia.org/wiki/La_Mancha">La Mancha</a>, quien enloquece leyendo libros de caballerías y se cree un caballero andante medieval.</p>
+   
+      <a title="Toño Antón, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Molino_Consuegra_Toledo.jpg"><img width="100%" alt="Molino Consuegra Toledo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Molino_Consuegra_Toledo.jpg/512px-Molino_Consuegra_Toledo.jpg"></a>
+   
+  </div>
+  <div class="col-6">
+    <h4>Mapa de Castilla-La Mancha, España</h4>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145557.981806339!2d-5.404360917466069!3d39.65345103669384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd665fc0adf9a72b%3A0x3be1ba931772b6d2!2sCastilla-La%20Mancha%2C%20Espa%C3%B1a!5e0!3m2!1ses-419!2sar!4v1665148300438!5m2!1ses-419!2sar" width="100%" height="450px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+
+
+<!--pie pagina-->
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+  <p class="col-md-4 mb-0 text-muted">© 2022 The travel bookshop</p>
+
+  <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+    <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+  </a>
+
+  <ul class="nav col-md-4 justify-content-end">
+    <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Inicio</a></li>
+    <li class="nav-item"><a href="clientes.html" class="nav-link px-2 text-muted">Clientes</a></li>
+    <li class="nav-item"><a href="galeria.html" class="nav-link px-2 text-muted">Galeria</a></li>
+    <li class="nav-item"><a href="listadoLibros.html" class="nav-link px-2 text-muted">Listado</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Tutorial</a></li>
+    
+    <li class="nav-item"><i class="bi bi-instagram nav-link px-2 text-muted"></i></li>
+    <li class="nav-item"><i class="bi bi-facebook nav-link px-2 text-muted"></i></li>        
+    <li class="nav-item"><i class="bi bi-whatsapp nav-link px-2 text-muted"></i></li>
+  </ul>
+
+
+</footer>
+<!--pie pagina-->
+
+    </div>
+</body>
+</html>
